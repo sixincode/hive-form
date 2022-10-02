@@ -2,6 +2,7 @@
 
 return [
     'name' => 'hiveIcon',
+    'identification' => 'hive-icon',
     'models'    => [
       'address'  =>
         [

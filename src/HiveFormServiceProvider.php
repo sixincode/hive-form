@@ -2,10 +2,10 @@
 
 namespace Sixincode\HiveForm;
 
-// use Spatie\LaravelPackageTools\Package;
-// use Spatie\LaravelPackageTools\PackageServiceProvider;
-// use Sixincode\HiveForm\Commands\HiveFormCommand;
-// use Illuminate\Foundation\Console\AboutCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Sixincode\HiveForm\Commands\HiveFormCommand;
+use Illuminate\Foundation\Console\AboutCommand;
 // use Illuminate\Support\Facades\Blade;
 // use Sixincode\HiveForm\Components\Button;
 // use Sixincode\HiveForm\Components\Card;
@@ -25,21 +25,21 @@ namespace Sixincode\HiveForm;
 
 class HiveFormServiceProvider extends PackageServiceProvider
 {
-    public function boot()
-    {
-      Blade::componentNamespace('Nightshade\\Views\\Components', 'nightshade');
-    }
+    // public function boot()
+    // {
+    //   Blade::componentNamespace('Nightshade\\Views\\Components', 'nightshade');
+    // }
 
 
     public function configurePackage(Package $package): void
     {
 
         $package
-            ->name('hive-form')
-            ->hasConfigFile(['hive-form','hive-icon'])
+            ->name(config('hive-form.identification'))
+            ->hasConfigFile([config('hive-form.identification'),config('hive-icon.identification')])
             ->hasTranslations()
             ->hasAssets()
-            ->hasViews('five-form')
+            ->hasViews(config('hive-form.identification'))
             ->hasViewComponents([
                 config('hive-form.identification')
               ,[
