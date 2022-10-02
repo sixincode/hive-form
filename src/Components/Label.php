@@ -6,14 +6,19 @@ use Illuminate\View\Component;
 
 class Label extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public $name;
+    public $class;
+    public $type;
+
+    public function __construct(
+      $name = null,
+      $class = null,
+      $type = null
+    )
     {
-        //
+      $this->name = $name;
+      $this->class = $class;
+      $this->type = $type;
     }
 
     /**

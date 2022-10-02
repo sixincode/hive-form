@@ -6,14 +6,25 @@ use Illuminate\View\Component;
 
 class Modal extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public $identifiant;
+    public $name;
+    public $class;
+    public $type;
+    public $width;
+
+    public function __construct(
+      $identifiant = null,
+      $name = null,
+      $class = null,
+      $width = null,
+      $type = null
+    )
     {
-        //
+      $this->identifiant = $identifiant;
+      $this->name = $name;
+      $this->class = $class;
+      $this->width = $width;
+      $this->type = $type;
     }
 
     /**

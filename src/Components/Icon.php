@@ -15,6 +15,7 @@ class Icon extends Component
     public $iconWidth;
     public $class;
     public $type;
+    public $config;
     /**
      * Create a new component instance.
      *
@@ -29,17 +30,20 @@ class Icon extends Component
       $height = 4,
       $width = 4,
       $iconWidth = 1,
-      $class = null
+      $class = null,
+      $type = null,
+      $config = 'hive-icon'
       )
     {
-      $this->path = config('icon.models.'.$path.'.path');
-      $this->viewBox = config('icon.models.'.$path.'.viewBox');
+      $this->path = config($config.'.models.'.$path.'.path');
+      $this->viewBox = config($config.'.models.'.$path.'.viewBox');
       $this->fill = $fill;
       $this->stroke = $stroke;
       $this->height = $height;
       $this->width = $width;
       $this->iconWidth = $iconWidth;
       $this->class = $class;
+      $this->type = $type;
       if(!$class)
         {
           $this->class = 'mr-1.5';
@@ -48,11 +52,7 @@ class Icon extends Component
         {
           $this->stroke = 'currentColor';
         };
-      if($type)
-        {
-          $this->path = config($type.'.models.'.$path.'.path');
-          $this->viewBox = config($type.'.models.'.$path.'.viewBox');
-        };
+
 
 
     }
