@@ -35,13 +35,13 @@ class HiveFormServiceProvider extends PackageServiceProvider
     {
 
         $package
-            ->name(config('hive-form.identification'))
-            ->hasConfigFile([config('hive-form.identification'),config('hive-icon.identification')])
+            ->name('hive-form')
+            ->hasConfigFile(['hive-form','hive-icon'])
             ->hasTranslations()
             ->hasAssets()
-            ->hasViews(config('hive-form.identification'))
+            ->hasViews('hive-form')
             ->hasViewComponents([
-                config('hive-form.identification')
+                'hive-form'
               ,[
                 Button::class,
                 Card::class,
