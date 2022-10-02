@@ -42,7 +42,7 @@ class HiveFormServiceProvider extends PackageServiceProvider
             ->hasViews('hive-form')
             ->hasViewComponents([
                 'hive-form'
-              ,[
+              ,
                 Button::class,
                 Card::class,
                 Checkbox::class,
@@ -58,7 +58,7 @@ class HiveFormServiceProvider extends PackageServiceProvider
                 SelectMultiple::class,
                 Text::class,
                 Upload::class,
-              ]
+
             ])
             ->hasMigration('create_hive-form_table')
             ->hasCommand(HiveFormCommand::class);
