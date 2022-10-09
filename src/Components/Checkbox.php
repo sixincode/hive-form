@@ -45,6 +45,6 @@ class Checkbox extends Component
      */
     public function render()
     {
-        return view('hive-form:components.checkbox');
+        return view('hive-form::components.checkbox');
     }
 }

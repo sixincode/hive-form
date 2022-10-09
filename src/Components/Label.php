@@ -28,6 +28,6 @@ class Label extends Component
      */
     public function render()
     {
-        return view('hive-form:components.label');
+        return view('hive-form::components.label');
     }
 }

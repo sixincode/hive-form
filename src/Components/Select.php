@@ -20,6 +20,6 @@ class Select extends Component
      */
     public function render()
     {
-        return view('hive-form:components.select');
+        return view('hive-form::components.select');
     }
 }

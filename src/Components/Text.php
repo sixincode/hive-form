@@ -49,6 +49,6 @@ class Text extends Component
      */
     public function render()
     {
-        return view('hive-form:components.text');
+        return view('hive-form::components.text');
     }
 }

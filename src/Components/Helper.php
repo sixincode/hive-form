@@ -28,6 +28,6 @@ class Helper extends Component
      */
     public function render()
     {
-        return view('hive-form:components.helper');
+        return view('hive-form::components.helper');
     }
 }

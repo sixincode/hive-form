@@ -63,6 +63,6 @@ class Input extends Component
      */
     public function render()
     {
-        return view('hive-form:components.input');
+        return view('hive-form::components.input');
     }
 }

@@ -64,6 +64,6 @@ class Icon extends Component
      */
     public function render()
     {
-        return view('hive-form:components.icon');
+        return view('hive-form::components.icon');
     }
 }

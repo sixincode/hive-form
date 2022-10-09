@@ -23,6 +23,6 @@ class ModalConfirmation extends Component
      */
     public function render()
     {
-        return view('hive-form:components.modal-confirmation');
+        return view('hive-form::components.modal-confirmation');
     }
 }

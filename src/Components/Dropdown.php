@@ -23,6 +23,6 @@ class Dropdown extends Component
      */
     public function render()
     {
-        return view('hive-form:components.dropdown');
+        return view('hive-form::components.dropdown');
     }
 }

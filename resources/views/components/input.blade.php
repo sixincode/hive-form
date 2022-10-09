@@ -15,4 +15,4 @@ switch ($type) {
         break;
 }
 @endphp
-<input {{ $disabled ? 'disabled' : '' }}  {!! $attributes->merge(['class' => $inputClasses.' '.$class.' w-'.{{$width}}.' block rounded', ]) !!}/>
+<input {{ $disabled ? 'disabled' : '' }}  {!! $attributes->merge(['class' => $inputClasses.' '.$class.' w-'.$width.' block rounded', ]) !!}/>

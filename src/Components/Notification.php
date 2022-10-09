@@ -23,6 +23,6 @@ class Notification extends Component
      */
     public function render()
     {
-        return view('hive-form:components.notification');
+        return view('hive-form::components.notification');
     }
 }

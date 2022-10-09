@@ -23,6 +23,6 @@ class SelectMultiple extends Component
      */
     public function render()
     {
-        return view('hive-form:components.select-multiple');
+        return view('hive-form::components.select-multiple');
     }
 }

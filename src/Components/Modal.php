@@ -34,6 +34,6 @@ class Modal extends Component
      */
     public function render()
     {
-        return view('hive-form:components.modal');
+        return view('hive-form::components.modal');
     }
 }

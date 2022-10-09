@@ -23,6 +23,6 @@ class Upload extends Component
      */
     public function render()
     {
-        return view('hive-form:components.upload');
+        return view('hive-form::components.upload');
     }
 }
