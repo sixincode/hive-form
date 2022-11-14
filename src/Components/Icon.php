@@ -25,7 +25,6 @@ class Icon extends Component
       $path = null,
       $viewBox = '0 0 24 24',
       $fill = 'none',
-      $type = null,
       $stroke = null,
       $height = 4,
       $width = 4,

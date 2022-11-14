@@ -4,7 +4,7 @@ namespace Sixincode\HiveForm\Components;
 
 use Illuminate\View\Component;
 
-class Input extends Component
+class Datepicker extends Component
 {
     public $name;
     public $label;
@@ -66,6 +66,6 @@ class Input extends Component
      */
     public function render()
     {
-        return view('hive-form::components.input');
+        return view('hive-form::components.datepicker');
     }
 }
