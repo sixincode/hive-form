@@ -18,7 +18,7 @@ class Input extends Component
     public $icon;
     public $iconClass;
     public $state;
-    public $type;
+    public $component;
     public $class;
     public $span;
     public $width;
@@ -33,7 +33,7 @@ class Input extends Component
       $is_disabled = null,
       $inputClass = null,
       $is_required = null,
-      $type = null,
+      $component = null,
       $state = null,
       $icon = null,
       $iconClass = null,
@@ -50,7 +50,7 @@ class Input extends Component
       $this->is_disabled = $is_disabled ;
       $this->inputClass = $inputClass ;
       $this->is_required = $is_required ;
-      $this->type = $type ;
+      $this->component = $component ;
       $this->state = $state ;
       $this->icon = $icon ;
       $this->span = $span ;

@@ -1,6 +1,6 @@
-@props(['disabled' => false,'type' => 'transparent','inputClass' => '','format' => 'text', 'class'=>'', 'width'=>'full'])
+@props(['disabled' => false,'component' => '','inputClass' => '','format' => 'text', 'class'=>'', 'width'=>'full'])
 @php
-switch ($type) {
+switch ($component) {
     case 'simple':
         $inputClasses = 'focus:ring-blue-400 focus:border-blue-400  focus:bg-gray-50';
          break;
@@ -23,7 +23,6 @@ switch ($type) {
 @endphp
 <div class="{{$span}}">
   <input {{ $disabled ? 'disabled' : '' }}
-  type="{{$format}}"
   autocomplete="off" {!! $attributes->merge([
     'class' => $inputClasses.' '.$class.' w-'.$width.' block appearance-none',
     'name' =>  $name ,
