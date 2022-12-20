@@ -8,17 +8,17 @@ class Label extends Component
 {
     public $name;
     public $class;
-    public $type;
+    public $component;
 
     public function __construct(
       $name = null,
       $class = null,
-      $type = null
+      $component = null
     )
     {
       $this->name = $name;
       $this->class = $class;
-      $this->type = $type;
+      $this->component = $component;
     }
 
     /**
