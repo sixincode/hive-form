@@ -205,6 +205,12 @@ return [
                       '<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /> ',
             'viewBox' => '0 0 24 24'
           ],
+        'feedback'  =>
+          [
+           'path'     =>
+                      '<path stroke="none" fill="currentColor" d="M7.001 3h2v4h-2V3zm1 7a1 1 0 110-2 1 1 0 010 2zM15 16a1 1 0 01-.6-.2L10.667 13H1a1 1 0 01-1-1V1a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1zM2 11h9a1 1 0 01.6.2L14 13V2H2v9z"></path> ',
+            'viewBox' => '0 0 16 16'
+          ],
           'file_attach'  =>
             [
              'path'     =>
@@ -289,6 +295,12 @@ return [
                       ' <path fill-rule="evenodd" d="M10 2c-2.236 0-4.43.18-6.57.524C1.993 2.755 1 4.014 1 5.426v5.148c0 1.413.993 2.67 2.43 2.902.848.137 1.705.248 2.57.331v3.443a.75.75 0 001.28.53l3.58-3.579a.78.78 0 01.527-.224 41.202 41.202 0 005.183-.5c1.437-.232 2.43-1.49 2.43-2.903V5.426c0-1.413-.993-2.67-2.43-2.902A41.289 41.289 0 0010 2zm0 7a1 1 0 100-2 1 1 0 000 2zM8 8a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>',
             'viewBox' => '0 0 20 20'
           ],
+        'module'  =>
+          [
+           'path'     =>
+                      '<path stroke-linecap="round" stroke-linejoin="round"  d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>',
+            'viewBox' => '0 0 24 24'
+          ],
         'net'  =>
           [
            'path'     =>
@@ -298,7 +310,7 @@ return [
         'notification'  =>
           [
            'path'     =>
-                      '<path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /> ',
+                      '<path stroke="none" d="M0 0h24v24H0z" fill="none"/>   <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />   <path d="M9 17v1a3 3 0 0 0 6 0v-1" /> ',
             'viewBox' => '0 0 24 24'
           ],
         'order'  =>
@@ -346,8 +358,8 @@ return [
         'plan'  =>
           [
            'path'     =>
-                      '<path stroke-linecap="round" stroke-linejoin="round"  d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>',
-            'viewBox' => '0 0 24 24'
+                      '<path stroke="none" fill="currentColor" d="M5 9h11v2H5V9zM0 9h3v2H0V9zm5 4h6v2H5v-2zm-5 0h3v2H0v-2zm5-8h7v2H5V5zM0 5h3v2H0V5zm5-4h11v2H5V1zM0 1h3v2H0V1z"/>',
+            'viewBox' => '0 0 16 16'
           ],
           'plus'  =>
             [
@@ -550,8 +562,8 @@ return [
           'wallet'  =>
             [
              'path'     =>
-                        '<path stroke-linecap="round" stroke-linejoin="round"  d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>',
-              'viewBox' => '0 0 24 24'
+                        '<path  stroke="none" fill="currentColor" d="M15 4c.6 0 1 .4 1 1v10c0 .6-.4 1-1 1H3c-1.7 0-3-1.3-3-3V3c0-1.7 1.3-3 3-3h7c.6 0 1 .4 1 1v3h4zM2 3v1h7V2H3c-.6 0-1 .4-1 1zm12 11V6H2v7c0 .6.4 1 1 1h11zm-3-5h2v2h-2V9z"/>',
+              'viewBox' => '0 0 16 16'
             ],
           'watch'  =>
             [

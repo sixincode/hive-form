@@ -6,21 +6,21 @@ use Illuminate\View\Component;
 
 class Modal extends Component
 {
-    public $identifiant;
+    public $identification;
     public $name;
     public $class;
     public $type;
     public $width;
 
     public function __construct(
-      $identifiant = null,
+      $identification = null,
       $name = null,
       $class = null,
       $width = null,
       $type = null
     )
     {
-      $this->identifiant = $identifiant;
+      $this->identification = $identification;
       $this->name = $name;
       $this->class = $class;
       $this->width = $width;

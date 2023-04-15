@@ -6,27 +6,11 @@ use Sixincode\ModulesInit\Package;
 use Sixincode\ModulesInit\PackageServiceProvider;
 use Sixincode\HiveForm\Commands\HiveFormCommand;
 use Illuminate\Foundation\Console\AboutCommand;
-use Sixincode\HiveForm\Components\Accordion;
-use Sixincode\HiveForm\Components\AccordionItem;
-use Sixincode\HiveForm\Components\Button;
-use Sixincode\HiveForm\Components\Card;
-use Sixincode\HiveForm\Components\Checkbox;
-use Sixincode\HiveForm\Components\Datepicker;
-use Sixincode\HiveForm\Components\Dropdown;
-use Sixincode\HiveForm\Components\Helper;
-use Sixincode\HiveForm\Components\Icon;
-use Sixincode\HiveForm\Components\Input;
-use Sixincode\HiveForm\Components\Label;
-use Sixincode\HiveForm\Components\Modal;
-use Sixincode\HiveForm\Components\ModalConfirmation;
-use Sixincode\HiveForm\Components\Notification;
-use Sixincode\HiveForm\Components\Select;
-use Sixincode\HiveForm\Components\SelectMultiple;
-use Sixincode\HiveForm\Components\Text;
-use Sixincode\HiveForm\Components\Tab;
-use Sixincode\HiveForm\Components\TabButton;
-use Sixincode\HiveForm\Components\TabItem;
-use Sixincode\HiveForm\Components\Upload;
+use Sixincode\HiveForm\Components as Components;
+use Sixincode\HiveForm\Components\Inputs\Text as Input;
+use Sixincode\HiveForm\Components\Buttons\Button as Button;
+use Livewire\Livewire;
+use Illuminate\Support\Facades\Blade;
 
 class HiveFormServiceProvider extends PackageServiceProvider
 {
@@ -34,37 +18,51 @@ class HiveFormServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('hive-form')
-            ->hasConfigFile(['hive-form','hive-icon'])
+            ->hasConfigFile(['hive-form','hive-form-components','hive-icon'])
             ->hasTranslations()
             ->hasAssets()
             ->hasViews('hive-form')
             ->hasViewComponents(
                 'hive-form',
-                Accordion::class,
-                AccordionItem::class,
-                Button::class,
-                Card::class,
-                Checkbox::class,
-                Datepicker::class,
-                Dropdown::class,
-                Helper::class,
-                Icon::class,
-                Input::class,
-                Label::class,
-                Modal::class,
-                ModalConfirmation::class,
-                Notification::class,
-                Select::class,
-                SelectMultiple::class,
-                Text::class,
-                Tab::class,
-                TabButton::class,
-                TabItem::class,
-                Upload::class,
+                // Components\Accordion::class,
+                // Components\AccordionItem::class,
+                // Components\Checkbox::class,
+              //  Components\Datepicker::class,
+                Components\Dropdown::class,
+                // Components\Helper::class,
+                // Components\Icon::class,
+              //  Components\Label::class,
+                Components\Modal::class,
+                Components\ModalConfirmation::class,
+                Components\Notification::class,
+                // Components\Select::class,
+                // Components\SelectMultiple::class,
+              //  Components\Text::class,
+                Components\Tab::class,
+                Components\TabButton::class,
+                Components\TabItem::class,
+                Components\Upload::class,
             )
             ->hasMigration('create_hive-form_table')
             ->hasCommand(HiveFormCommand::class);
         AboutCommand::add('Sixin Code Alpha Elements for Laravel', fn () => ['Version' => '1.0.0']);
-
     }
+
+    public function packageBooted()
+    {
+      $this->bootHiveFormBladeAndLivewireComponents();
+    }
+
+    public function bootHiveFormBladeAndLivewireComponents()
+    {
+      $prefix = config('hive-form-components.prefix', 'hive-form');
+      foreach (config('hive-form-components.blade', []) as $alias => $component) {
+          $alias = $prefix ? "$prefix-$alias" : $alias;
+          Blade::component($alias, $component);
+        }
+      foreach (config('hive-form-components.livewire', []) as $alias => $component) {
+          $alias = $prefix ? "$prefix-$alias" : $alias;
+          Livewire::component($alias, $component);
+        }
+     }
 }
