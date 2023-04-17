@@ -26,6 +26,8 @@ class TemplateInputElement extends Component
     public $class;
     public $span;
     public $width;
+    public $rounded;
+    public $text_size;
 
     public function __construct(
       $name,
@@ -47,6 +49,8 @@ class TemplateInputElement extends Component
       $iconClass = null,
       $class = null,
       $width = null,
+      $rounded = null,
+      $text_size = null,
       $span = null
     ){
       $this->name = $name;
@@ -68,9 +72,70 @@ class TemplateInputElement extends Component
       $this->iconClass = $iconClass ;
       $this->class = $class ;
       $this->width = $width ;
+      $this->rounded = $rounded ;
+      $this->text_size = $text_size ;
       $this->identification = $identification ;
 
       $this->renderViewSettings();
+      $this->setTextSize($this->text_size);
+      $this->setRadius($this->rounded);
+    }
+
+    public function setTextSize($size = 'sm')
+    {
+      switch ($size){
+          case 'xs':
+             $this->text_size = 'text-xs';
+             break;
+          case 'sm':
+             $this->text_size = 'text-sm';
+             break;
+          case 'md':
+             $this->text_size = 'text-md';
+             break;
+          case 'lg':
+             $this->text_size = 'text-lg';
+             break;
+          case 'xl':
+             $this->text_size = 'text-xl';
+             break;
+          case '2xl':
+             $this->text_size = 'text-2xl';
+             break;
+          default:
+             $this->text_size = 'text-md';
+             break;
+        }
+    }
+
+    public function setRadius($size)
+    {
+      switch ($size){
+          case 'xs':
+             $this->rounded = 'rounded-xs';
+             break;
+          case 'sm':
+             $this->rounded = 'rounded-sm';
+             break;
+          case 'md':
+             $this->rounded = 'rounded-md';
+             break;
+          case 'lg':
+             $this->rounded = 'rounded-lg';
+             break;
+          case 'xl':
+             $this->rounded = 'rounded-xl';
+             break;
+          case '2xl':
+             $this->rounded = 'rounded-2xl';
+             break;
+          case 'full':
+             $this->rounded = 'rounded-full';
+             break;
+          default:
+             $this->rounded = 'rounded-md';
+             break;
+        }
     }
 
     public function setDefaultFramework()
