@@ -4,6 +4,7 @@ namespace Sixincode\HiveForm\Components\Base;
 
 use Illuminate\View\Component;
 use Sixincode\HiveForm\Traits\RenderingViewTrait;
+use Illuminate\Support\Str;
 
 class TemplateIconElement extends Component
 {
@@ -64,7 +65,7 @@ class TemplateIconElement extends Component
 
 
       if(!$this->name){
-        $this->name = str_slug($this->path);
+        $this->name = Str::slug($this->path,'_');
       }
 
       if(!$stroke){

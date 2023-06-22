@@ -4,6 +4,7 @@ namespace Sixincode\HiveForm\Components\Base;
 
 use Illuminate\View\Component;
 use Sixincode\HiveForm\Traits\RenderingViewTrait;
+use Illuminate\Support\Str;
 
 class TemplateButtonElement extends Component
 {
@@ -35,7 +36,7 @@ class TemplateButtonElement extends Component
       $identification = null,
       $color = null,
       $tag = 'a',
-      $text_color = 'text-white hover:text-white',
+      $text_color = null,
       $has_spinner = false,
       $button_type = null,
       $is_disabled = false,
@@ -80,7 +81,11 @@ class TemplateButtonElement extends Component
       }
 
       if(!$this->name){
-        $this->name = str_slug($this->title);
+        $this->name = Str::slug($this->title,'_');
+      }
+
+      if(!$this->text_color){
+        $this->text_color = 'text-gray-200 hover:text-gray-400';
       }
 
 
