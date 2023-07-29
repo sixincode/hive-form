@@ -105,9 +105,9 @@ class TemplateButtonElement extends Component
         $this->color = 'disabled';
       }
 
-      $this->renderViewSettings();
       $this->setButtonColor($this->color);
       $this->setButtonSize($this->size);
+      $this->renderViewSettings();
 
     }
 

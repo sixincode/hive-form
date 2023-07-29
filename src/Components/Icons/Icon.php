@@ -9,22 +9,12 @@ class Icon extends TemplateIconElement
 {
   public function setDefaultSource()
   {
-    return $this->source = config('hive-form.defaultViews.iconsSource');
+    return $this->source = config('hive-form.defaultViews.iconsSVGSource');
   }
 
   public function setDefaultComponent()
   {
-    return $this->component = config('hive-form.defaultViews.defaultIcon');
+    return $this->component = config('hive-form.defaultViews.defaultSVGIcon');
   }
-    //
-    //
-    // /**
-    //  * Get the view / contents that represent the component.
-    //  *
-    //  * @return \Illuminate\Contracts\View\View|\Closure|string
-    //  */
-    // public function render()
-    // {
-    //     return view('hive-form::components.icon');
-    // }
+
 }

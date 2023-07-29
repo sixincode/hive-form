@@ -29,7 +29,7 @@ class TemplateIconElement extends Component
       $path,
       $name = null,
       $identification = null,
-      $viewBox = '0 0 24 24',
+      $viewBox = null,
       $fill = null,
       $stroke = null,
       $height = 4,
@@ -47,9 +47,11 @@ class TemplateIconElement extends Component
       $this->path = $path;
       $this->name = $name;
       $this->identification = $identification ;
-      $this->viewBox = $viewBox;
+      $this->schema = config("icon.{$this->path}.path");
+      (!$viewBox)?($this->viewBox = config("icon.{$this->path}.viewBox") ):($this->viewBox = '0 0 24 24' );
+      (!$fill)?($this->fill = 'none' ):($this->fill = 'currentColor');
+      (!$size)?($this->size = '1.5'):($this->size = $size);
       $this->color  = $color;
-      $this->fill   = $fill ;
       $this->stroke = $stroke ;
       $this->height = $height ;
       $this->width = $width ;
@@ -59,8 +61,6 @@ class TemplateIconElement extends Component
       $this->source = $source;
       $this->component = $component;
       $this->base = $base;
-      $this->size = $size;
-      $this->schema = __DIR__.'\..\..\..\ressources\views\components\icons\.'.'icons\.'.$this->path;
 
 
 
@@ -74,33 +74,8 @@ class TemplateIconElement extends Component
 
       $this->renderViewSettings();
       $this->setIconColor($this->color);
-      $this->setIconSize($this->size);
       $this->setIconSpace($this->space);
 
-    }
-
-    public function setIconSize($size = 'regular')
-    {
-      switch ($size){
-          case 'tiny':
-             $this->size = 'max-w-32';
-             break;
-          case 'small':
-             $this->size = 'max-w-48';
-             break;
-          case 'regular':
-             $this->size = 'max-w-64';
-             break;
-          case 'large':
-             $this->size = 'max-w-80';
-             break;
-          case 'full':
-             $this->size = 'w-full';
-             break;
-          default:
-             $this->size = 'max-w-64';
-             break;
-          }
     }
 
     public function setIconSpace($space = 'regular')
