@@ -2829,7 +2829,7 @@
                 "symfony/service-contracts": "^1.1|^2|^3"
             },
             "conflict": {
-                "symfony/http-kernel": "<6.0.12"
+                "symfony/http-kernel": "<6.1.12"
             },
             "require-dev": {
                 "symfony/http-client-contracts": "^1.1|^2|^3",
@@ -4039,7 +4039,7 @@
                 "symfony/config": "<5.4",
                 "symfony/console": "<5.4",
                 "symfony/dependency-injection": "<5.4",
-                "symfony/http-kernel": "<6.0.12",
+                "symfony/http-kernel": "<6.1.12",
                 "symfony/twig-bundle": "<5.4",
                 "symfony/yaml": "<5.4"
             },
