@@ -85,7 +85,7 @@ class TemplateButtonElement extends Component
       }
 
       if(!$this->text_color){
-        $this->text_color = 'text-gray-200 hover:text-gray-400';
+        $this->text_color = 'text-white hover:text-gray-100';
       }
 
 
@@ -170,10 +170,8 @@ class TemplateButtonElement extends Component
             $this->text_color = 'text-slate-400';
             break;
           case 'simple':
-            $this->color = 'border border-slate-200  focus:border-blue-300 shadow-sm hover:bg-slate-100 active:bg-slate-200';
-            if(!$this->text_color){
-              $this->text_color = 'text-slate-400';
-            }
+            $this->color = 'border border-slate-100  focus:border-blue-300 shadow-sm hover:bg-slate-50 active:bg-slate-200';
+            $this->text_color = 'text-slate-500 hover:text-slate-700';
             break;
           default:
              $this->color = 'bg-blue-600 border border-transparent hover:bg-blue-700 active:bg-blue-700';
