@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^8.1",
-        "sixincode/modules-init": "^1.10",
+        "sixincode/modules-init": "dev-main",
         "illuminate/contracts": "^10.0"
     },
     "require-dev": {
