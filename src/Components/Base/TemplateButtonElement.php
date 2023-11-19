@@ -170,7 +170,7 @@ class TemplateButtonElement extends Component
             $this->text_color = 'text-slate-400';
             break;
           case 'simple':
-            $this->color = 'border border-slate-100  focus:border-blue-300 shadow-sm hover:bg-slate-50 active:bg-slate-200';
+            $this->color = 'border border-slate-100  focus:border-blue-300 shadow-sm hover:bg-slate-100 active:bg-slate-200';
             $this->text_color = 'text-slate-500 hover:text-slate-700';
             break;
           default:

@@ -12,7 +12,7 @@
     'is_required'=>true
 ])
 @php
-  $inputClasses = 'p-2 border text-sm placeholder-slate-300 rounded-md shadow-sm border-slate-200 focus:outline-none focus:ring-0 focus:border-blue-300 dark:bg-slate-700 dark:text-white dark:placeholder-slate-400 dark:border-slate-700';
+  $inputClasses = 'p-2 border placeholder-slate-300 rounded-md shadow-sm border-slate-200 focus:outline-none focus:ring-0 focus:border-blue-300 dark:bg-slate-700 dark:text-white dark:placeholder-slate-400 dark:border-slate-700';
 @endphp
 <div class="{{$span}}">
   @if($label)
@@ -34,8 +34,6 @@
       'name' => $name,
       'rows' =>  $rows ,
       'placeholder' =>  $placeholder ,
-      'x-model'=> $identification,
-
       ]) !!}/></textarea>
     </div>
 </div>

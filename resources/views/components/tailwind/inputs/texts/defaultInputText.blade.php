@@ -15,7 +15,6 @@
       'class' => $class.' '.$rounded.' '.$text_size.' '.$inputClasses.' w-'.$width.' block appearance-none',
       'name' =>  $name ,
       'placeholder' =>  $placeholder ,
-      'x-model' => $identification ,
     ]) !!}/>
   </div>
 </div>

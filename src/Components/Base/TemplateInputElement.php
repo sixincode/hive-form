@@ -103,7 +103,7 @@ class TemplateInputElement extends Component
              $this->text_size = 'text-2xl';
              break;
           default:
-             $this->text_size = 'text-md';
+             $this->text_size = '';
              break;
         }
     }

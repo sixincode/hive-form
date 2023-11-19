@@ -1,5 +1,5 @@
 @php
-  $buttonClasses = 'rounded text-sm font-semibold p-2 px-4 cursor-pointer flex items-center';
+  $buttonClasses = 'rounded text-sm font-semibold p-2 px-4 cursor-pointer flex items-center justify-center';
 @endphp
 
 <{{$tag}}
